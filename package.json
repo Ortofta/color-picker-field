@@ -1,9 +1,9 @@
 {
-  "name": "@appreciated/color-picker-field",
-  "version": "2.0.0-beta.5",
-  "description": "color-picker-field",
+  "name": "@ortofta/color-picker-field",
+  "version": "3.0.0",
+  "description": "color-picker-field, based on the work of Juchar (see https://github.com/juchar/color-picker-field)",
   "main": "color-picker-field.js",
-  "repository": "juchar/color-picker-field",
+  "repository": "ortofta/color-picker-field",
   "keywords": [
     "Vaadin",
     "color-picker-field",
@@ -11,12 +11,12 @@
     "web-component",
     "polymer"
   ],
-  "author": "Juchar",
+  "author": "Ortofta",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/juchar/color-picker-field/issues"
+    "url": "https://github.com/ortofta/color-picker-field/issues"
   },
-  "homepage": "https://github.com/juchar/color-picker-field",
+  "homepage": "https://github.com/ortofta/color-picker-field",
   "files": [
     "vaadin-*.js",
     "src",
@@ -34,29 +34,31 @@
     "lint": "npm-run-all --parallel lint:*",
     "lint:css": "stylelint *.js src/*.js demo/*.js theme/**/*.js",
     "lint:js": "eslint *.js src demo --ext .js",
-    "start": "polymer serve --port 3000 --npm",
+    "start": "es-dev-server --app-index index.html --node-resolve --watch --open",
     "preversion": "magi update-version"
   },
   "devDependencies": {
-    "@vaadin/vaadin-component-dev-dependencies": "^3.0.0",
     "@polymer/iron-component-page": "^4.0.1",
+    "@vaadin/vaadin-component-dev-dependencies": "^3.0.0",
     "@vaadin/vaadin-demo-helpers": "^3.0.0",
-    "@webcomponents/webcomponentsjs": "^2.3.0"
+    "@webcomponents/webcomponentsjs": "^2.3.0",
+    "es-dev-server": "^2.0.2"
   },
   "dependencies": {
-    "@polymer/polymer": "^3.0.0",
-    "@vaadin/vaadin-control-state-mixin": "^2.1.1",
-    "@vaadin/vaadin-element-mixin": "^2.0.0",
-    "@vaadin/vaadin-themable-mixin": "^1.2.1",
-    "@thebespokepixel/es-tinycolor": "^1.0.7",
     "@appreciated/color-picker": "^2.0.0-beta.4",
     "@polymer/iron-icon": "^3.0.1",
     "@polymer/iron-media-query": "^3.0.1",
+    "@polymer/polymer": "^3.0.0",
+    "@thebespokepixel/es-tinycolor": "^1.0.7",
     "@vaadin/vaadin-button": "^2.2.1",
     "@vaadin/vaadin-context-menu": "^4.3.12",
+    "@vaadin/vaadin-control-state-mixin": "^2.1.1",
+    "@vaadin/vaadin-element-mixin": "^2.0.0",
     "@vaadin/vaadin-icons": "^4.3.1",
     "@vaadin/vaadin-ordered-layout": "^1.1.0",
     "@vaadin/vaadin-tabs": "^3.0.4",
-    "@vaadin/vaadin-text-field": "^2.4.11"
+    "@vaadin/vaadin-text-field": "^2.4.11",
+    "@vaadin/vaadin-themable-mixin": "^1.2.1",
+    "polymer-cli": "^1.9.11"
   }
 }
